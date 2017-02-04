@@ -1,33 +1,38 @@
 package in.madalinski.githubtrends.model;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by ishas on 03.02.2017.
  */
 
 public class GitHubRepoOwner {
     private String login;
-    private Integer id;
-    private String avatar_url;
-    private String gravatar_id;
-    private String html_url;
+    private Long id;
+    @SerializedName("avatar_url")
+    private String avatarUrl;
+    @SerializedName("gravatar_id")
+    private String gravatarId;
+    @SerializedName("html_url")
+    private String htmlUrl;
 
     public String getLogin() {
         return login;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public String getAvatar_url() {
-        return avatar_url;
+    public String getAvatarUrl() {
+        return avatarUrl;
     }
 
-    public String getGravatar_id() {
-        return gravatar_id;
+    public String getGravatarId() {
+        return gravatarId;
     }
 
-    public String getHtml_url() {
-        return html_url;
+    public String getHtmlUrl() {
+        return htmlUrl;
     }
 }

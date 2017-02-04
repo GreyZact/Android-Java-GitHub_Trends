@@ -1,22 +1,27 @@
 package in.madalinski.githubtrends.model;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by ishas on 03.02.2017.
  */
 
 public class GitHubRepo {
-    private Integer id;
+    private Long id;
     private String name;
-//    private GitHubRepoOwner owner;
-    private String html_url;
+    private GitHubRepoOwner owner;
+    @SerializedName("html_url")
+    private String htmlUrl;
     private String description;
     private String language;
-    private Boolean has_issues;
-    private Integer watchers;
-    private Integer forks;
-    private Integer open_issues;
+    @SerializedName("has_issues")
+    private Boolean hasIssues;
+    private Long watchers;
+    private Long forks;
+    @SerializedName("open_issues")
+    private Long openIssues;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
@@ -24,12 +29,12 @@ public class GitHubRepo {
         return name;
     }
 
-//    public GitHubRepoOwner getOwner() {
-//        return owner;
-//    }
+    public GitHubRepoOwner getOwner() {
+        return owner;
+    }
 
-    public String getHtml_url() {
-        return html_url;
+    public String getHtmlUrl() {
+        return htmlUrl;
     }
 
     public String getDescription() {
@@ -40,19 +45,19 @@ public class GitHubRepo {
         return language;
     }
 
-    public Boolean getHas_issues() {
-        return has_issues;
+    public Boolean getHasIssues() {
+        return hasIssues;
     }
 
-    public Integer getWatchers() {
+    public Long getWatchers() {
         return watchers;
     }
 
-    public Integer getForks() {
+    public Long getForks() {
         return forks;
     }
 
-    public Integer getOpen_issues() {
-        return open_issues;
+    public Long getOpenIssues() {
+        return openIssues;
     }
 }

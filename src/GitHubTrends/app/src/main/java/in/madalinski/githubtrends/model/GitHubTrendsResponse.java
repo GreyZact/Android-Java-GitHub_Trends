@@ -9,17 +9,19 @@ import java.util.List;
  */
 
 public class GitHubTrendsResponse {
-    private Integer total_count;
-    private Boolean incomplete_results;
+    @SerializedName("total_count")
+    private Long totalCount;
+    @SerializedName("incomplete_results")
+    private Boolean incompleteResults;
     @SerializedName("items")
     private List<GitHubRepo> repoList;
 
-    public Integer getTotal_count() {
-        return total_count;
+    public Long getTotalCount() {
+        return totalCount;
     }
 
-    public Boolean getIncomplete_results() {
-        return incomplete_results;
+    public Boolean getIncompleteResults() {
+        return incompleteResults;
     }
 
     public List<GitHubRepo> getRepoList() {
